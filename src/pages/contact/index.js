@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -17,30 +18,23 @@ export const ContactUs = () => {
     variant: "",
   });
 
+  const form = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
 
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
-
     emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        public_key: contactConfig.public_key,
+      })
+
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "Gracias por tu mensaje! Ya fue enviado con exito.",
+            alertmessage: "¡Gracias por tu mensaje! Ya fue enviado con éxito.",
             variant: "success",
             show: true,
           });
@@ -48,7 +42,7 @@ export const ContactUs = () => {
         (error) => {
           console.log(error.text);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            alertmessage: `¡Error al enviar el mensaje! ${error.text}`,
             variant: "danger",
             show: true,
           });
@@ -112,7 +106,11 @@ export const ContactUs = () => {
             <p>{contactConfig.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
-            <form onSubmit={handleSubmit} className="contact__form w-100">
+            <form
+              ref={form}
+              onSubmit={handleSubmit}
+              className="contact__form w-100"
+            >
               <Row>
                 <Col lg="6" className="form-group">
                   <input
