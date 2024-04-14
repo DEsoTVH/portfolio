@@ -163,7 +163,7 @@ const contactConfig = {
     "¡Hablemos! Estoy aquí para ayudarte. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible. Tu opinión es importante para mí y estoy emocionado de escuchar sobre tus proyectos y cómo puedo contribuir a su éxito.",
   // creat an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-  YOUR_SERVICE_ID: "service_id",
+  YOUR_SERVICE_ID: "service_vjexdfr",
   YOUR_TEMPLATE_ID: "template_id",
   YOUR_USER_ID: "user_id",
 };
