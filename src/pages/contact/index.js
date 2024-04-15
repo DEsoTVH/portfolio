@@ -26,7 +26,7 @@ export const ContactUs = () => {
 
     emailjs
       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        public_key: contactConfig.public_key,
+        public_key: "cqxgdt-Mn6kREmM7e",
       })
 
       .then(

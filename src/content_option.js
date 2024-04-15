@@ -94,22 +94,19 @@ const dataportfolio = [
     link: "https://desotvh.github.io/iguanapage/",
   },
   {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
+    img: "https://r2.easyimg.io/pdb8vs3uz/pastaiola.png",
+    description: "La Pastaiola.",
+    link: "https://playful-cranachan-f658db.netlify.app/",
   },
   {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
+    img: "https://r2.easyimg.io/pdb8vs3uz/pokedex.png",
+    description: "Pokedex-Pokeapi.",
+    link: "https://enchanting-scone-23510d.netlify.app/",
   },
   {
-    img: "https://picsum.photos/400/300/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
+    img: "https://r2.easyimg.io/y2k6rzbm4/rockydoggie.png",
+    description: "Rocky Doggie Party Planner",
+    link: "https://profound-sorbet-9863df.netlify.app/",
   },
   {
     img: "https://picsum.photos/400/700/?grayscale",
